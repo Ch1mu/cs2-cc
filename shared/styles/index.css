@@ -1,0 +1,25 @@
+body{
+    background: linear-gradient(rgba(37, 37, 37, 0.5), rgba(37, 37, 37, 0.5)), url("../assets/cs2.jpg");
+    background-size: cover;
+    backroung;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.title{
+
+}
+
+.main-description{
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(199, 199, 199, 0.5);
+}
