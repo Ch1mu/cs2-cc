@@ -22,6 +22,101 @@
         día anterior como el propio día de lanzamiento, la cuenta oficial de Twitter de Counter Strike estuvo hypeando a
         la comunidad con pequeños guiños y vídeos bastante emotivos para conmemorar el histórico día.</p>
         
+    <h1 class="title">Nuevas Armas</h1>
+    <ul id="listaArmas"></ul>
+
+    <h1 class="title">Reforma de mapas</h1>
+    <ul id="listaMapas"></ul>
+
+
 </body>
+
+<footer>
+    <a href="formularioInscripcion.html" class="btn btn-primary">Ir al Formulario</a>
+</footer>
+
+
+<script>
+    var armas = [
+        {
+            tipo: "Pistola",
+            balas: 12,
+            precio: 500,
+            nombre: "Glock"
+        },
+        {
+            tipo: "Rifle de Asalto",
+            balas: 30,
+            precio: 2500,
+            nombre: "AK-47"
+        },
+        {
+            tipo: "Francotirador",
+            balas: 5,
+            precio: 4500,
+            nombre: "AWP"
+        }
+    ];
+
+    function mostrarArmas() {
+        var listaArmasElement = document.getElementById("listaArmas");
+
+        armas.forEach(function(arma) {
+            var listItem = document.createElement("li");
+            listItem.innerHTML = `
+                <strong>Tipo:</strong> ${arma.tipo}, 
+                <strong>Balas:</strong> ${arma.balas}, 
+                <strong>Precio:</strong> $${arma.precio}, 
+                <strong>Nombre:</strong> ${arma.nombre}
+            `;
+            listaArmasElement.appendChild(listItem);
+        });
+    }
+
+    mostrarArmas();
+</script>
+
+
+<script>
+    var mapas = [
+        {
+            nombre: "Dust II",
+            tipo: "Desierto",
+            jugadores: "10-20",
+            dificultad: "Media"
+        },
+        {
+            nombre: "Inferno",
+            tipo: "Ciudad",
+            jugadores: "10-20",
+            dificultad: "Alta"
+        },
+        {
+            nombre: "Mirage",
+            tipo: "Ciudad",
+            jugadores: "10-20",
+            dificultad: "Media"
+        }
+    ];
+
+    function mostrarMapas() {
+        var listaMapasElement = document.getElementById("listaMapas");
+
+        mapas.forEach(function(mapa) {
+            var listItem = document.createElement("li");
+            listItem.innerHTML = `
+                <strong>Nombre:</strong> ${mapa.nombre}, 
+                <strong>Tipo:</strong> ${mapa.tipo}, 
+                <strong>Jugadores:</strong> ${mapa.jugadores}, 
+                <strong>Dificultad:</strong> ${mapa.dificultad}
+            `;
+            listaMapasElement.appendChild(listItem);
+        });
+    }
+
+    mostrarMapas();
+</script>
+
+
 
 </html>
