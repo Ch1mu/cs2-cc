@@ -8,115 +8,107 @@
     <link rel="stylesheet" href="/shared/styles/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#formularioInscripcion").load("shared/pages/formularioInscripcion.html");
+        });
+        $(function () {
+            $("#navbar").load("shared/pages/nav.html");
+        });
+    </script>
+    <script src="scripts/indexJS.js"></script>
 
 </head>
 
 <body>
+    <section style="width: 100%;" id="navbar"></section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <div class="indice">
+        <p>Indice</p>
+        <div class="indice-list">
+            <li> <a href="#CS2">CS2</a></li>
+            <li> <a href="#valve">VALVE</a> </li>
+            <li> <a href="#motor">Source 2</a> </li>
+            <li> <a href="#form">Form</a> </li>
+        </div>
+    </div>
 
-
-    <h1 class="title">Counter Strike 2</h1>
-    <p class="main-description">Tras una espera que se pareció eterna, Counter Strike 2 se lanzó el miércoles 27 de septiembre de 2023. Tanto el
-        día anterior como el propio día de lanzamiento, la cuenta oficial de Twitter de Counter Strike estuvo hypeando a
-        la comunidad con pequeños guiños y vídeos bastante emotivos para conmemorar el histórico día.</p>
-        
-    <h1 class="title">Nuevas Armas</h1>
-    <ul id="listaArmas"></ul>
-
-    <h1 class="title">Reforma de mapas</h1>
-    <ul id="listaMapas"></ul>
-
+    <section id="CS2">
+        <h1 class="title">Counter Strike 2</h1>
+        <p class="main-description">Tras una espera que se pareció eterna, Counter Strike 2 se lanzó el miércoles 27 de
+            septiembre de 2023. Tanto el
+            día anterior como el propio día de lanzamiento, la cuenta oficial de Twitter de Counter Strike estuvo
+            hypeando a
+            la comunidad con pequeños guiños y vídeos bastante emotivos para conmemorar el histórico día.</p>
+        <div class="main-description">
+            <h2>¿Por que CS2?</h2>
+            <p>
+                Se trata del reemplazo de 'Counter Strike: Global Offensive'
+                Estamos ante una actualización que va más allá de una simple mejora estética
+                Sabíamos prácticamente desde principios de año que 'Counter Strike 2' estaba en desarrollo. Esta
+                información, proveniente de rumores, fue confirmada por la propia Valve en marzo, que habilitó por ese
+                entonces una prueba limitada del juego. Desde ese entonces, solo algunos usuarios han tenido la
+                posibilidad
+                de disfrutar del título, pero ahora está disponible para todos, y gratis.
+                <br><br>
+                Empezar a jugar gratis es muy sencillo. Tan solo tienes que buscar 'Counter Strike 2’ en el cliente de
+                <a href="https://steampowered.com" target="_blank">Steam</a>
+                descargado en tu PC con Windows. Una vez localizado el título, hacer clic en descargar y esperar a que
+                suceda la magia. Recordemos que, como juego free to play, si queremos aprovechar todas sus capacidades
+                tendremos que, sí o sí, pasar por caja y gastar algo de dinero.
+            </p>
+        </div>
+    </section>
 
 </body>
 
-<footer>
-    <a href="formularioInscripcion.html" class="btn btn-primary">Ir al Formulario</a>
+<section id="valve">
+    <h1 class="title">Acerca de Valve</h1>
+    <div class="main-description">
+
+        <p>
+            Valve Corporation, también conocido como Valve Software, es una empresa estadounidense desarrolladora de
+            videojuegos. Se hizo mundialmente famosa por su primer juego, Half-Life y por una modificación de este,
+            Counter-Strike.
+
+            Otros de sus logros más famosos son la creación del motor de videojuego Source, utilizado en gran parte de
+            sus
+            videojuegos, incluyendo Half-Life 2, Portal, Team Fortress 2, Left 4 Dead, Left 4 Dead 2 y Dota 2 y la
+            creación
+            de la plataforma digital de videojuegos Steam. Las oficinas centrales de Valve Software se encuentran en
+            Bellevue, Washington, Estados Unidos.
+
+            Valve fue fundada en 1996 por Gabe Newell y Mike Harrington. Ambos eran trabajadores del gigante informático
+            Microsoft y habían trabajado en sus sistemas operativos Windows y OS/2 antes de pasarse al mundo de los
+            videojuegos. Con Half-Life, su primer videojuego, Valve cosechó un tremendo éxito obteniendo beneficios de
+            sus
+            expansiones y mods. En su trabajo junto a la comunidad de jugadores se encuentran títulos como
+            Counter-Strike o
+            Day of Defeat. En mayo de 2003, Valve Software causó un gran revuelo en la feria Electronic Entertainment
+            Expo
+            al presentar lo que parecía una versión prácticamente terminada de Half-Life 2.
+        </p>
+    </div>
+</section>
+<section id="motor">
+    <div class="main-description">
+        <h1 class="title">El motor gráfico</h1>
+        <p>
+            Source 2 es un motor de videojuego desarrollado por Valve Corporation como sucesor del motor Source
+            original. El motor fue anunciado en 2015, y el primer juego en usarlo fue Dota 2, el cual fue porteado
+            al Source 2 en 2015.​ El motor es capaz de renderizar escenas muy complejas y bien detalladas con
+            mínimas caídas de cuadros, gracias a su nuevo soporte de 64 bits junto con Vulkan, lo que permite un
+            mejor renderizado multinúcleo y un renderizado 3D más eficiente.
+        </p>
+    </div>
+</section>
+<footer id="form">
+    <div id="formularioInscripcion"></div>
 </footer>
-
-
-<script>
-    var armas = [
-        {
-            tipo: "Pistola",
-            balas: 12,
-            precio: 500,
-            nombre: "Glock"
-        },
-        {
-            tipo: "Rifle de Asalto",
-            balas: 30,
-            precio: 2500,
-            nombre: "AK-47"
-        },
-        {
-            tipo: "Francotirador",
-            balas: 5,
-            precio: 4500,
-            nombre: "AWP"
-        }
-    ];
-
-    function mostrarArmas() {
-        var listaArmasElement = document.getElementById("listaArmas");
-
-        armas.forEach(function(arma) {
-            var listItem = document.createElement("li");
-            listItem.innerHTML = `
-                <strong>Tipo:</strong> ${arma.tipo}, 
-                <strong>Balas:</strong> ${arma.balas}, 
-                <strong>Precio:</strong> $${arma.precio}, 
-                <strong>Nombre:</strong> ${arma.nombre}
-            `;
-            listaArmasElement.appendChild(listItem);
-        });
-    }
-
-    mostrarArmas();
-</script>
-
-
-<script>
-    var mapas = [
-        {
-            nombre: "Dust II",
-            tipo: "Desierto",
-            jugadores: "10-20",
-            dificultad: "Media"
-        },
-        {
-            nombre: "Inferno",
-            tipo: "Ciudad",
-            jugadores: "10-20",
-            dificultad: "Alta"
-        },
-        {
-            nombre: "Mirage",
-            tipo: "Ciudad",
-            jugadores: "10-20",
-            dificultad: "Media"
-        }
-    ];
-
-    function mostrarMapas() {
-        var listaMapasElement = document.getElementById("listaMapas");
-
-        mapas.forEach(function(mapa) {
-            var listItem = document.createElement("li");
-            listItem.innerHTML = `
-                <strong>Nombre:</strong> ${mapa.nombre}, 
-                <strong>Tipo:</strong> ${mapa.tipo}, 
-                <strong>Jugadores:</strong> ${mapa.jugadores}, 
-                <strong>Dificultad:</strong> ${mapa.dificultad}
-            `;
-            listaMapasElement.appendChild(listItem);
-        });
-    }
-
-    mostrarMapas();
-</script>
-
 
 
 </html>
