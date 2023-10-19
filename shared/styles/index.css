@@ -49,6 +49,9 @@ footer{
     border-radius: 5px;
     margin-top: 15px;
 }
+.indice-title{
+    font-weight: bold;
+}
 .indice p{
     margin-top: 5px;
     display: flex;
