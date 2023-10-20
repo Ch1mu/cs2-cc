@@ -25,24 +25,22 @@ function mostrarArmas() {
 
         switch (arma.rarity) {
           case "Covert":
-            listItem.style.background = "red";
+            listItem.style.background = "#ff00009e";
             break;
           case "Classified":
-            listItem.style.background = "pink";
+            listItem.style.background = "#ffc0cba6";
             break;
           case "Mil-Spec Grade":
-            listItem.style.background = "blue";
+            listItem.style.background = "#0000ff75";
             break;
           case "Restricted":
-            listItem.style.background = "purple";
+            listItem.style.background = "#800080bf";
             break;
         }
 
         listItem.innerHTML = `
-        <div class="card-body" style="display:flex;flex-direction:column;justify-content:center;">
-       
+            <div class="card-body" style="display:flex;flex-direction:column;justify-content:center;">
             <strong style="text-align:center">${arma.name}</strong>
-            
             <img style="width:200px" src=${arma.image}> 
             </div>   
         `;
