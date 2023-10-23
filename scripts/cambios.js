@@ -15,7 +15,6 @@ function mostrarArmas() {
     .then((data) => {
       armas = data[0].contains;
 
-      console.log(armas);
       armas.forEach(function (arma) {
         var listItem = document.createElement("li");
         listItem.className = "card";
@@ -39,7 +38,7 @@ function mostrarArmas() {
         }
 
         listItem.innerHTML = `
-            <div class="card-body" style="display:flex;flex-direction:column;justify-content:center;">
+            <div class="card-body" style="display:flex;flex-direction:column;justify-content:center; width:250px">
             <strong style="text-align:center">${arma.name}</strong>
             <img style="width:200px" src=${arma.image}> 
             </div>   
